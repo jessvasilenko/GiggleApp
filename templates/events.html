@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Near You</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body class="events-page">
+    <div class="section">
+        <h2>Find Events Near You</h2>
+    </div>
+    
+    <div class="section">
+        <button id="useCurrentLocation">Use Current Location</button>
+        or
+        <input type="text" id="manualLocation" placeholder="Enter your location">
+        <button id="useManualLocation">Submit</button>
+    </div>
+    
+    <div class="section" id="eventsList">
+        <!-- Events will be listed here -->
+        {% if events %}
+            <ul>
+                {% for event in events %}
+                    <li>{{ event }}</li>
+                {% endfor %}
+            </ul>
+        {% elif error %}
+            <p>Error: {{ error }}</p>
+        {% else %}
+            <p>No events to display. Please select a location.</p>
+        {% endif %}
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#useCurrentLocation').click(function() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function(position) {
+                        const lat = position.coords.latitude;
+                        const lon = position.coords.longitude;
+                        // Display the latitude and longitude
+                        $('#eventsList').html(`<p>Latitude: ${lat}, Longitude: ${lon}</p>`);
+                    });
+                } else {
+                    $('#eventsList').text("Geolocation is not supported by this browser.");
+                }
+            });
+
+            $('#useManualLocation').click(function() {
+                const location = $('#manualLocation').val();
+                // Display the manually entered location
+                $('#eventsList').html(`<p>Location entered: ${location}</p>`);
+            });
+        });
+    </script>
+</body>
+</html>

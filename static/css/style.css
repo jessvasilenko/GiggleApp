@@ -1,0 +1,135 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #662A2A; /* Adjusted to a shade of brown */
+}
+
+h1 {
+    text-shadow: 4px 4px #420303f9;
+}
+
+.container {
+    text-align: center;
+    color: rgb(246, 241, 205);
+}
+
+.title {
+    font-size: 4em; /* Larger title for web */
+    margin-bottom: 0.5em;
+}
+
+.image-container img {
+    width: 30%; /* Adjust image size for web */
+    max-width: 500px; /* To ensure it doesn't get too large */
+    margin-bottom: 1em;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+}
+
+.btn {
+    text-decoration: none;
+    color: #f9f4cd;
+    background-color: #C06014; /* A complementing shade for buttons */
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 10px auto; /* Center the buttons horizontally */
+    width: 200px; /* Fixed width for buttons */
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.btn.login {
+    background-color: #9E2A2B; /* A red-ish shade for login */
+}
+
+.btn.register {
+    background-color: #3C6E71; /* A teal-ish shade for register */
+}
+
+.btn:hover {
+    background-color: #F4D35E; /* A lighter shade for hover effect */
+}
+
+
+.login-container {
+    background-color: #f9f4cd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #f9f4cd;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.flashes {
+    color: red;
+    list-style-type: none;
+    padding: 0;
+}
+
+.back-button {
+    display: inline-block;
+    margin: 20px;
+    padding: 5px 10px;
+    background-color: #f9f4cd;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.back-button:hover {
+    background-color: #f9f4cd;
+}
+
+body.events-page {
+    display: block;
+    height: auto;
+    padding: 20px;
+}
+
+body.events-page .section {
+    margin-bottom: 20px; /* Adds space between sections */
+}
+
+body.events-page #eventsList ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+body.events-page #eventsList li {
+    margin-bottom: 10px; /* Adds space between list items */
+}
