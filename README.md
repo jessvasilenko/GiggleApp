@@ -7,6 +7,6 @@ How to request data:
 Enter 1 into the terminal if you want to request your current longitude and latitude. If you want to enter a specific location name, enter 2 and then enter the name of a valid location (ex: Corvallis, Oregon).
 
 How to recieve data: 
-You should recieve the coordinates of your location or the location you entered in the terminal after the last step. 
+You should recieve the coordinates of your location or the location you entered in the terminal in the previous step. 
 
-<img width="600" alt="image" src="https://github.com/jessvasilenko/GiggleApp/assets/107789798/ccbb66ec-7e5a-48bb-96a9-49c309fc9195">
+<img width="650" alt="image" src="https://github.com/jessvasilenko/GiggleApp/assets/107789798/ccbb66ec-7e5a-48bb-96a9-49c309fc9195">
