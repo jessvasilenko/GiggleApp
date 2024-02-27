@@ -1,7 +1,7 @@
 # Location_service
 Communication Contract: 
 
-Download the file. Open terminal to the directory where the file lives. Run pip install geocoder geopy. Run 'python location_service.py'. 
+Download the file. Open terminal to the directory where the file lives. Run 'pip3 install geocoder geopy'. Run 'python3 location_service.py'. 
 
 How to request data: 
 Enter 1 into the terminal if you want to request your current longitude and latitude. If you want to enter a specific location name, enter 2 and then enter the name of a valid location (ex: Corvallis, Oregon).
