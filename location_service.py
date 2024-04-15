@@ -6,10 +6,10 @@ app = Flask(__name__)
 def get_location():
     data = request.json
     if 'lat' in data and 'lon' in data:
-        # Here you would have logic to determine events based on latitude and longitude
+        # Logic to determine events based on latitude and longitude
         return jsonify({'events': 'List of events based on latitude and longitude'})
     elif 'location' in data:
-        # And here you would have logic to determine events based on a location name
+        # Logic to determine events based on a location name
         return jsonify({'events': 'List of events based on location name'})
     else:
         return jsonify({'error': 'Invalid location data'}), 400
