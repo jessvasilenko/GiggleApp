@@ -66,7 +66,6 @@ def logout():
 def events():
     if request.method == 'POST':
         # This block is executed when the form is submitted
-        # We're assuming the form data contains 'latitude' and 'longitude'
         latitude = request.form.get('latitude')
         longitude = request.form.get('longitude')
         # Here we make a POST request to the microservice
